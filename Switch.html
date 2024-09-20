@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a,b 
+        a=parseInt(prompt("Enter a number"))
+        b=parseInt(prompt("Enter a number"))
+        alert("1:Addition\n2:Subtraction\n3:Multiplication\n4:Division")
+        let ch=parseInt(prompt("Which operation you want to perform"))
+        switch(ch)
+        {
+            case 1:
+                alert("Addition is :"+(a+b))
+                break;
+
+            case 2:
+                alert("Subtraction is :"+(a-b))
+                break;
+
+            case 3:
+                alert("Multiplication is :"+(a*b))
+                break;
+
+            case 4:
+                alert("Division is :"+(a/b))
+                break;
+
+            default:
+                alert("Please enter correct choice")
+                break;
+        }
+    </script>
+</body>
+</html>

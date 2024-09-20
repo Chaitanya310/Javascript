@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class employee
+        {
+            constructor(empid,name,addr,phone,dept,salary,email,exp)
+            {
+                this.empid=empid
+                this.name=name
+                this.addr=addr
+                this.phone=phone
+                this.dept=dept
+                this.salary=salary
+                this.email=email
+                this.exp=exp
+            }
+           
+            display()
+            {
+                return `Employee id:${this.empid} ,Employee name:${this.name}, Address:${this.addr}, Phone:${this.phone},<br>`
+            }
+        
+    
+            print()
+            {
+                return`Employee department: ${this.dept}  Employee salary: ${this.salary} `
+            }
+
+            disp()
+            {
+                return` Employee email: ${this.email}  Employee experience: ${this.exp} `
+
+            }
+            
+        }
+        let emp1= new employee(1,"ABC","Pune",1234,"Devlopment",50000,"xyz",5)
+        document.write(emp1.display())
+        document.write(emp1.print())
+        document.write(emp1.disp())
+
+        let emp2= new employee(2,"XYZ","Mumbai",5678,"Testing",40000,"abc",10)
+        document.write(emp2.display())
+        document.write(emp2.print())
+        document.write(emp2.disp())
+    </script>
+</body>
+</html>

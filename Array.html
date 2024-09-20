@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var fruit= ["Apple","Banana","Orange","Mango"];
+        var vege = ["Tomato","Capsicum","Drum sticks"];
+        var qty = ["10","45","23","67","89"];
+        var e = qty.find(f);
+        function f(q)
+        {
+            if(q>40)
+            {
+                document.write(q+"<br>");
+            }
+        }
+        vege.forEach(fe)
+        function fe(item,index)
+        {
+            document.write(index+":"+item+"<br>");
+        }
+        var c = fruit.concat(vege);
+        document.write("Concatenated array is: "+c+"<br>");
+        var a = fruit.copyWithin(1,2);
+        document.write("Copied array is: "+a+"<br>");
+        document.write("Length of an array is: "+fruit.length+"<br>");
+        document.write("Length of an array is: "+vege.length+"<br>");
+        document.write("Length of an array is: "+qty.length+"<br>");
+        var i = fruit.indexOf("Orange");
+        document.write("Index of element is: "+i+"<br>");
+        fruit.pop();
+        document.write(fruit+"<br>");
+        fruit.push("Grapes");
+        document.write(fruit+"<br>");
+        document.write(fruit.reverse()+"<br>");
+        document.write(fruit.sort()+"<br>");
+        document.write(fruit.reverse()+"<br>");
+        qty.filter(chk);
+        function chk(qt)
+        {
+            if(qt<25)
+            {
+                document.write(qt+"<br>");
+            }
+        }
+        document.write(qty.map(
+        function(cnt)
+        {
+            return cnt*2;
+        }
+        
+        )
+        )
+        vege.splice(3,0,"Cabbage");
+        document.write(vege+"<br>");
+
+
+    </script>
+</body>
+</html>

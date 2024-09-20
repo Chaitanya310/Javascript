@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="b1">Date</button>
+    <button id="b2">Message</button>
+    <button id="b3">Function</button>
+    <button id="b4">Manny Events</button>
+
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    
+    <div id="div1">
+        <button onclick="removeHandler()" id="myBtn">Remove</button>
+    </div>
+</body>
+ <script>
+    document.getElementById("b1").addEventListener("click",display)
+    function display(){
+        document.getElementById("p1").innerHTML= Date();
+    }
+
+    document.getElementById("b2").addEventListener("click", function()
+    {
+        alert("Welcome to javascript");
+    });
+
+    var x= document.getElementById("b3");
+    x.addEventListener("click", mes1);
+    x.addEventListener("click",mes2);
+    function mes1(){
+        alert("Hello Everyone!");
+    }
+    function mes2(){
+        alert("We will learn EventListner");
+    }
+
+    var y= document.getElementById("b4");
+    y.addEventListener("mouseover",clr1);
+    y.addEventListener("mouseout",clr2);
+    y.addEventListener("click",clr3);
+
+    function clr1(){
+          document.bgColor= "pink";
+    }
+    function clr2(){
+        document.bgColor= "purple";
+    }
+    function clr3(){
+        document.bgColor = "cyan";
+    }
+
+    window.addEventListener("resize", function(){
+        document.getElementById("p2").innerHTML = Math.random();
+
+    });
+
+    document.getElementById("div1").addEventListener("mousemove",m1)
+    function m1(){
+        document.getElementById("p3").innerHTML = Math.random();
+    }
+
+    function removeHandler(){
+        document.getElementById("div1").removeEventListener("mousemove",m1);
+    }
+ </script>
+</html>

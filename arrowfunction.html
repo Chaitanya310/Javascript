@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+
+    <script>
+        var hello;
+        hello = () => "Hello world!";
+        document.getElementById("p1").innerHTML= hello();
+
+        let add = (a,b) => a+b;
+        document.getElementById("p2").innerHTML= add(5,6); 
+
+        var msg;
+        msg = displ => "Hello " + displ;
+        document.getElementById("p3").innerHTML = msg("Everyone!");
+    </script>
+</body>
+</html>
